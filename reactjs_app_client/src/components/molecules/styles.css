@@ -1,0 +1,178 @@
+/* https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+
+:root {
+    --borderSmall: 3px;
+    --borderMedium: 5px;
+    --borderLarge: 7px;
+    --charcoal-color: #264653;
+    --persianGreen-color: #2A9D8F;
+    --orangeYellowCrayola-color: #E9C46A;
+    --sandyBrown-color: #F4A261;
+    --burntSienna-color: #E76F51;
+    --darkSkyBlue-color: #9DC3D2;
+    --white: white;
+    --whitesmoke: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+/* -----------------------headerHome */
+
+.headerHome {
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border: var(--borderLarge);
+    background-color: var(--burntSienna-color);
+}
+
+.headerHome-search-button button {
+    width: 100%;
+    height: 100%;
+    background-color: var(--sandyBrown-color);
+}
+
+.headerHome-search-button i {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.headerHome-search-button {
+    width: 2rem;
+    height: 2rem;
+}
+
+.headerHome-search-input input {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.headerHome-search-input {
+    flex-grow: 1;
+    height: 2rem;
+}
+
+
+/* ----------------BannerSliderWrap */
+
+.BannerSliderWrap {
+    overflow-x: hidden;
+    position: relative;
+    border-radius: var(--borderMedium);
+}
+
+.BannerSlider {
+    display: flex;
+    width: 10000px;
+}
+
+.BannerSliderCard img {
+    width: 100%;
+}
+
+.BannerSliderCard {
+    width: 100vw;
+    height: fit-content;
+}
+
+.slideNav {
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.slideNavLeft,
+.slideNavRight {
+    background-color: var(--charcoal-color);
+    font-size: 1.2rem;
+    color: var(--white);
+    opacity: 0.3;
+}
+
+
+/* -----------------------HomeTabbar */
+
+.HomeTabbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid var(--orangeYellowCrayola-color);
+    align-items: center;
+    font-size: 0.6rem;
+    padding: 0.2rem 0;
+    background-color: var(--white);
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.HomeTabbar i {
+    font-size: 1.5rem;
+}
+
+.HomeTabbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* -------------CardHeader */
+
+.CardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sandyBrown-color);
+    padding: 0.3rem 0.2rem;
+    box-sizing: border-box;
+    color: var(--charcoal-color);
+}
+
+
+/* --------------CardProductItem */
+
+.CardProductItem {
+    width: 100%;
+    padding: 0.1rem;
+    box-sizing: border-box;
+    border: 0.1px solid var(--darkSkyBlue-color);
+    margin: 0.5rem 0;
+}
+
+.CardProductImage>img {
+    width: 100%;
+}
+
+.CardProductPrice {
+    color: var(--orangeYellowCrayola-color);
+}
+
+.CardProductLocation {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}

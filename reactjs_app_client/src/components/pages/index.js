@@ -1,4 +1,8 @@
 import TestPages from "./TestPages";
-export{
-    TestPages
+import HomePage from "./HomePage";
+import Categories from "./Categories";
+export {
+    TestPages,
+    HomePage,
+    Categories
 }
