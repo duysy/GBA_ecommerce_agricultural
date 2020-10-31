@@ -22,7 +22,9 @@ export default class extends Component{
         await this.getProduct();
     }
     getProduct = async () => {
-        this.setState({ message: JSON.stringify(await getProduct()) })
+        let data = JSON.stringify(await getProduct())
+        console.log(data)
+        this.setState({ message:  data})
     }
     onClick = async (event) => {
         var data = await setProduct(this.state.id, this.state.title, this.state.price, this.state.unit, this.state.caterory, this.state.datePost, this.state.hashIpfsDetail);

@@ -1,7 +1,18 @@
 import web3 from './web3';
 
-const addressContract = '0x4b32d5c9dcb4ed8fef1a4368b38a68d13ab7a607';
+const addressContract = '0x64095B65d3e5cce6ADC15ff0DF912d4cac690f6E';
 const abi = [{
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "index",
+            "type": "uint256"
+        }],
+        "name": "popIteamProduct",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -82,6 +93,16 @@ const abi = [{
                 "type": "string"
             },
             {
+                "internalType": "uint256",
+                "name": "discount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "soldAtLocation",
+                "type": "string"
+            },
+            {
                 "internalType": "string",
                 "name": "hashIpfsDetail",
                 "type": "string"
@@ -95,22 +116,29 @@ const abi = [{
     {
         "inputs": [{
                 "internalType": "uint256",
-                "name": "idSeller",
+                "name": "idProduct",
                 "type": "uint256"
             },
             {
                 "internalType": "uint256",
-                "name": "AvengeStart",
+                "name": "discount",
                 "type": "uint256"
-            },
-            {
+            }
+        ],
+        "name": "setProductDiscount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{
                 "internalType": "string",
-                "name": "nameSeller",
+                "name": "nameUser",
                 "type": "string"
             },
             {
                 "internalType": "string",
-                "name": "addressSeller",
+                "name": "addressUser",
                 "type": "string"
             },
             {
@@ -119,12 +147,40 @@ const abi = [{
                 "type": "string"
             },
             {
+                "internalType": "string",
+                "name": "phoneNumber",
+                "type": "string"
+            }
+        ],
+        "name": "setUserInfo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+                "internalType": "address",
+                "name": "addressUser",
+                "type": "address"
+            },
+            {
                 "internalType": "bool",
-                "name": "isConfirm",
+                "name": "isSeller",
                 "type": "bool"
             }
         ],
-        "name": "setSeller",
+        "name": "setUserIsSeller",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "index",
+            "type": "uint256"
+        }],
+        "name": "testIteamProduct",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -187,6 +243,17 @@ const abi = [{
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "getIAllIdProduct",
+        "outputs": [{
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+        }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [{
             "internalType": "uint256",
             "name": "idProduct",
@@ -198,6 +265,52 @@ const abi = [{
             "name": "",
             "type": "string[]"
         }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+            "internalType": "address",
+            "name": "addressUser",
+            "type": "address"
+        }],
+        "name": "getUserInfo",
+        "outputs": [{
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
         "stateMutability": "view",
         "type": "function"
     },
@@ -234,6 +347,16 @@ const abi = [{
                 "type": "string"
             },
             {
+                "internalType": "uint256",
+                "name": "discount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "soldAtLocation",
+                "type": "string"
+            },
+            {
                 "internalType": "string",
                 "name": "hashIpfsDetail",
                 "type": "string"
@@ -244,11 +367,11 @@ const abi = [{
     },
     {
         "inputs": [{
-            "internalType": "uint256",
+            "internalType": "address",
             "name": "",
-            "type": "uint256"
+            "type": "address"
         }],
-        "name": "MapSellert",
+        "name": "MapUser",
         "outputs": [{
                 "internalType": "uint256",
                 "name": "AvengeStart",
@@ -256,12 +379,12 @@ const abi = [{
             },
             {
                 "internalType": "string",
-                "name": "nameSeller",
+                "name": "nameUser",
                 "type": "string"
             },
             {
                 "internalType": "string",
-                "name": "addressSeller",
+                "name": "addressUser",
                 "type": "string"
             },
             {
@@ -270,8 +393,13 @@ const abi = [{
                 "type": "string"
             },
             {
+                "internalType": "string",
+                "name": "phoneNumber",
+                "type": "string"
+            },
+            {
                 "internalType": "bool",
-                "name": "isConfirm",
+                "name": "isSeller",
                 "type": "bool"
             }
         ],

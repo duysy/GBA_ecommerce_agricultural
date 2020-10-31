@@ -9,10 +9,11 @@ function App() {
     <div className="App">
       <IpfsRouter>
         <Switch>
-          <Route path="/" exact component={TestPages} />
+          <Route path="/" exact component={HomePage} />
           <Route path="/Categories" exact component={Categories} />
           <Route path="/Cart" exact component={HomePage} />
           <Route path="/Account" exact component={HomePage} />
+          <Route path="/TestPage" exact component={TestPages} />
         </Switch>
       </IpfsRouter>
     </div>
