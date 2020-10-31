@@ -1,13 +1,13 @@
 import web3 from './web3';
 
-const addressContract = '0x64095B65d3e5cce6ADC15ff0DF912d4cac690f6E';
+const addressContract = '0x37617BcaD95a712344F7D7746E75C6123332caFF';
 const abi = [{
         "inputs": [{
             "internalType": "uint256",
             "name": "index",
             "type": "uint256"
         }],
-        "name": "popIteamProduct",
+        "name": "delIteamProduct",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -170,17 +170,6 @@ const abi = [{
             }
         ],
         "name": "setUserIsSeller",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [{
-            "internalType": "uint256",
-            "name": "index",
-            "type": "uint256"
-        }],
-        "name": "testIteamProduct",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -360,47 +349,6 @@ const abi = [{
                 "internalType": "string",
                 "name": "hashIpfsDetail",
                 "type": "string"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [{
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-        }],
-        "name": "MapUser",
-        "outputs": [{
-                "internalType": "uint256",
-                "name": "AvengeStart",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "nameUser",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "addressUser",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "hashIpfsDetail",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "phoneNumber",
-                "type": "string"
-            },
-            {
-                "internalType": "bool",
-                "name": "isSeller",
-                "type": "bool"
             }
         ],
         "stateMutability": "view",

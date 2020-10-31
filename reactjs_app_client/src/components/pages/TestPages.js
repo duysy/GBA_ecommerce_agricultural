@@ -15,6 +15,8 @@ export default class extends Component{
             unit: "",
             caterory: "",
             datePost: "",
+            discount:"",
+            soldAtLocation:"",
             hashIpfsDetail: ""
         }
     }
@@ -22,12 +24,13 @@ export default class extends Component{
         await this.getProduct();
     }
     getProduct = async () => {
-        let data = JSON.stringify(await getProduct())
+        let data = JSON.stringify(await getProduct(1));
+        // let data = JSON.stringify(await getProduct(1));
         console.log(data)
         this.setState({ message:  data})
     }
     onClick = async (event) => {
-        var data = await setProduct(this.state.id, this.state.title, this.state.price, this.state.unit, this.state.caterory, this.state.datePost, this.state.hashIpfsDetail);
+        var data = await setProduct(this.state.id, this.state.title, this.state.price, this.state.unit, this.state.caterory, this.state.datePost,this.state.discount,this.state.soldAtLocation, this.state.hashIpfsDetail);
         this.setState({ status: 'Waiting for set message: ' + JSON.stringify(data) });
         this.setState({ status: 'Done' });
         await this.getProduct();
@@ -50,7 +53,16 @@ export default class extends Component{
                     unit: event.target.value
                 })} />
                 <input onChange={event => this.setState({
+                    caterory: event.target.value
+                })} />
+                <input onChange={event => this.setState({
                     datePost: event.target.value
+                })} />
+                <input onChange={event => this.setState({
+                    discount: event.target.value
+                })} />
+                <input onChange={event => this.setState({
+                    soldAtLocation: event.target.value
                 })} />
                 <input onChange={event => this.setState({
                     hashIpfsDetail: event.target.value
