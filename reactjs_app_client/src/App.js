@@ -1,5 +1,5 @@
 import React from 'react';
-import {HomePage ,Categories} from "./components/pages";
+import {HomePage , Categories, Cart} from "./components/pages";
 import Test from "./components/Test";
 import { Route, Switch } from "react-router-dom";
 import IpfsRouter from 'ipfs-react-router';
@@ -11,7 +11,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/Categories" exact component={Categories} />
-          <Route path="/Cart" exact component={HomePage} />
+          <Route path="/Cart" exact component={Cart} />
           <Route path="/Account" exact component={HomePage} />
         </Switch>
       </IpfsRouter>
