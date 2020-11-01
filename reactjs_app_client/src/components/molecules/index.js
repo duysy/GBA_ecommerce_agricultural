@@ -9,6 +9,9 @@ import Account from "./Account"
 import LoginForm from "./LoginForm"
 import RegisterForm from "./RegisterForm"
 import ProductDetails from "./ProductDetails";
+import ProductDetailsMore from "./ProductDetailsMore";
+import Comment from "./Comment";
+
 
 export {
     TestMolecules,
@@ -21,5 +24,7 @@ export {
     Account,
     LoginForm,
     RegisterForm,
-    ProductDetails
+    ProductDetails,
+    ProductDetailsMore,
+    Comment
 }

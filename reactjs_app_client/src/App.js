@@ -13,7 +13,7 @@ function App() {
           <Route path="/Categories" exact component={Categories} />
           <Route path="/Cart" exact component={Cart} />
           <Route path="/Account" exact component={Account} />
-          <Route path="/ProductDetails" exact component={ProductDetails} />
+          <Route path="/ProductDetails/slug" exact component={ProductDetails} />
 
         </Switch>
       </IpfsRouter>
