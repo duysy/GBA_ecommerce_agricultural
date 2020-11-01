@@ -1,0 +1,11 @@
+pragma solidity ^0.5.0;
+contract CryptoNames {
+    string[2][] public crypto_names;
+ 
+    constructor() public {
+        crypto_names.push(["Alice", "Bob"]);   // generic characters
+        crypto_names.push(["Carol", "Dave"]);  // 3rd and 4th party
+        crypto_names.push(["Eve", "Frank"]);   // Bad guys
+        crypto_names.push(["Grace", "Heidi"]); // others
+    }
+}

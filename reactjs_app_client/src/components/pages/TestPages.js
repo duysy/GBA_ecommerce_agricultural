@@ -1,6 +1,6 @@
 import React,{Component} from "react";
-import { getProduct } from '../../contract/getData';
-import { setProduct } from '../../contract/rawData';
+import { getProduct ,getImageProduct,getUserInfo} from '../../contract/getData';
+import { setProduct ,setUserInfo} from '../../contract/rawData';
 import "./test.css";
 export default class extends Component{
     constructor(props) {
@@ -24,13 +24,14 @@ export default class extends Component{
         await this.getProduct();
     }
     getProduct = async () => {
+        // let data = JSON.stringify(await getUserInfo("0x54BD5967aB40D1f4F3719412DBFa2237E7Cb3C76"));
         let data = JSON.stringify(await getProduct(1));
-        // let data = JSON.stringify(await getProduct(1));
         console.log(data)
         this.setState({ message:  data})
     }
     onClick = async (event) => {
         var data = await setProduct(this.state.id, this.state.title, this.state.price, this.state.unit, this.state.caterory, this.state.datePost,this.state.discount,this.state.soldAtLocation, this.state.hashIpfsDetail);
+        // var data = await setUserInfo("Nguyen Duy Sy","Da Nang","4638274678362478238476328784723","03445450");
         this.setState({ status: 'Waiting for set message: ' + JSON.stringify(data) });
         this.setState({ status: 'Done' });
         await this.getProduct();

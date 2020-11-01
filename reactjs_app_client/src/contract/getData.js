@@ -12,7 +12,7 @@ export async function getUserInfo(addressUser) {
     return await contract.methods.getUserInfo(addressUser).call()
 }
 export async function getAllUser() {
-    return await contract.methods.getAllUser(idProduct, idComment).call()
+    return await contract.methods.getAllUser().call()
 }
 export async function getAllIdProduct() {
     return await contract.methods.getAllIdProduct().call()

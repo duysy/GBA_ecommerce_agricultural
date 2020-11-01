@@ -1,7 +1,27 @@
 import web3 from './web3';
 
-const addressContract = '0x37617BcaD95a712344F7D7746E75C6123332caFF';
+const addressContract = '0xFBCDdCde8F78Bc1928c0a8f09976474675679732';
 const abi = [{
+        "constant": false,
+        "inputs": [{
+                "internalType": "uint256",
+                "name": "idProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "imageProduct",
+                "type": "string"
+            }
+        ],
+        "name": "addImageProduct",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
         "inputs": [{
             "internalType": "uint256",
             "name": "index",
@@ -9,10 +29,12 @@ const abi = [{
         }],
         "name": "delIteamProduct",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -41,27 +63,12 @@ const abi = [{
         ],
         "name": "setCommentProduct",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [{
-                "internalType": "uint256",
-                "name": "idProduct",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "imageProduct",
-                "type": "string"
-            }
-        ],
-        "name": "setImageProduct",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
+        "constant": false,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "id",
@@ -110,10 +117,12 @@ const abi = [{
         ],
         "name": "setProduct",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -127,10 +136,12 @@ const abi = [{
         ],
         "name": "setProductDiscount",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [{
                 "internalType": "string",
                 "name": "nameUser",
@@ -154,10 +165,12 @@ const abi = [{
         ],
         "name": "setUserInfo",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [{
                 "internalType": "address",
                 "name": "addressUser",
@@ -171,30 +184,31 @@ const abi = [{
         ],
         "name": "setUserIsSeller",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "constructor"
     },
     {
-        "inputs": [{
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-        }],
-        "name": "ArrayIdProduct",
+        "constant": true,
+        "inputs": [],
+        "name": "getAllIdProduct",
         "outputs": [{
-            "internalType": "uint256",
+            "internalType": "uint256[]",
             "name": "",
-            "type": "uint256"
+            "type": "uint256[]"
         }],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -228,21 +242,12 @@ const abi = [{
                 "type": "string"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "getIAllIdProduct",
-        "outputs": [{
-            "internalType": "uint256[]",
-            "name": "",
-            "type": "uint256[]"
-        }],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
+        "constant": true,
         "inputs": [{
             "internalType": "uint256",
             "name": "idProduct",
@@ -254,10 +259,12 @@ const abi = [{
             "name": "",
             "type": "string[]"
         }],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [{
             "internalType": "address",
             "name": "addressUser",
@@ -300,10 +307,12 @@ const abi = [{
                 "type": "bool"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [{
             "internalType": "uint256",
             "name": "",
@@ -351,10 +360,12 @@ const abi = [{
                 "type": "string"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "owner",
         "outputs": [{
@@ -362,6 +373,7 @@ const abi = [{
             "name": "",
             "type": "address"
         }],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     }

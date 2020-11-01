@@ -1,7 +1,7 @@
 pragma solidity >=0.4.22 <0.7.0;
 pragma experimental ABIEncoderV2; // contructer methot input string.
 
-contract GBA {
+contract GBAdsadsa {
     address public owner;
 
     constructor() public {
