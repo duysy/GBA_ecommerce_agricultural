@@ -5,8 +5,7 @@ import HomeTabbar from "./HomeTabbar"
 import CardHeader from "./CardHeader"
 import CardProductItem from "./CardProductItem"
 import Cart from "./Cart"
-
-
+import Account from "./Account"
 
 export {
     TestMolecules,
@@ -15,5 +14,6 @@ export {
     HomeTabbar,
     CardHeader,
     CardProductItem,
-    Cart
+    Cart,
+    Account
 }

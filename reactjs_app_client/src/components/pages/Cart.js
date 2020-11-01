@@ -24,6 +24,41 @@ const listProduct = [
         price: "34.8479",
         amount: '1'
     },
+    {
+        ProductName: '4.Áo Khoác, Áo Khoác HOODIE Unisex Nam Nữ',
+        ProductDescription: 'Màu xanh đen',
+        urlImage: "https://loremflickr.com/300/300",
+        price: "34.8479",
+        amount: '1'
+    },
+    {
+        ProductName: '5.Áo Khoác, Áo Khoác HOODIE Unisex Nam Nữ',
+        ProductDescription: 'Màu xanh đen',
+        urlImage: "https://loremflickr.com/300/300",
+        price: "34.8479",
+        amount: '1'
+    },
+    {
+        ProductName: '6.Áo Khoác, Áo Khoác HOODIE Unisex Nam Nữ',
+        ProductDescription: 'Màu xanh đen',
+        urlImage: "https://loremflickr.com/300/300",
+        price: "34.8479",
+        amount: '1'
+    },
+    {
+        ProductName: '7.Áo Khoác, Áo Khoác HOODIE Unisex Nam Nữ',
+        ProductDescription: 'Màu xanh đen',
+        urlImage: "https://loremflickr.com/300/300",
+        price: "34.8479",
+        amount: '1'
+    },
+    {
+        ProductName: '8.Áo Khoác, Áo Khoác HOODIE Unisex Nam Nữ',
+        ProductDescription: 'Màu xanh đen',
+        urlImage: "https://loremflickr.com/300/300",
+        price: "34.8479",
+        amount: '1'
+    },
 ]
 
 export default class extends Component {
