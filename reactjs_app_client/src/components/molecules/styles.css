@@ -176,3 +176,43 @@
     font-size: 0.8rem;
     opacity: 0.8;
 }
+
+
+/* ---------------------------Categories */
+
+.CategoriesTab {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.CategoriesNav {
+    width: 25%;
+    height: 100%;
+    border: 1px solid var(--orangeYellowCrayola-color);
+}
+
+.CategoriesNav>ul {
+    width: 100%;
+    height: 100%;
+}
+
+.CategoriesNav>ul>li {
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    border-bottom: 1px solid var(--orangeYellowCrayola-color);
+}
+
+.CategoriesNav-active {
+    background-color: var(--orangeYellowCrayola-color);
+}
+
+.CategorieContent {
+    display: none;
+}
+
+.Categorie-active {
+    display: block;
+}

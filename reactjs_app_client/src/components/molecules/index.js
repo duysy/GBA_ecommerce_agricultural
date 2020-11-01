@@ -4,6 +4,8 @@ import BannerSliderWrap from "./BannerSliderWrap";
 import HomeTabbar from "./HomeTabbar"
 import CardHeader from "./CardHeader"
 import CardProductItem from "./CardProductItem"
+import Categories from "./Categories"
+import CategoriesContent from "./CategoriesContent"
 
 
 export {
@@ -12,5 +14,7 @@ export {
     BannerSliderWrap,
     HomeTabbar,
     CardHeader,
-    CardProductItem
+    CardProductItem,
+    Categories,
+    CategoriesContent
 }
