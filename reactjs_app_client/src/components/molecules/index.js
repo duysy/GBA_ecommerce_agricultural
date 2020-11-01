@@ -6,6 +6,9 @@ import CardHeader from "./CardHeader"
 import CardProductItem from "./CardProductItem"
 import Cart from "./Cart"
 import Account from "./Account"
+import LoginForm from "./LoginForm"
+import RegisterForm from "./RegisterForm"
+import ProductDetails from "./ProductDetails";
 
 export {
     TestMolecules,
@@ -15,5 +18,8 @@ export {
     CardHeader,
     CardProductItem,
     Cart,
-    Account
+    Account,
+    LoginForm,
+    RegisterForm,
+    ProductDetails
 }
