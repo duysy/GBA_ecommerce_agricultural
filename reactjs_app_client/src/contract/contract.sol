@@ -1,7 +1,8 @@
-pragma solidity >=0.4.22 <0.7.0;
+pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2; // contructer methot input string.
+import "https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/evm-contracts/src/v0.6/ChainlinkClient.sol";
 
-contract GBAdsadsa {
+contract GBA {
     address public owner;
 
     constructor() public {
@@ -20,12 +21,13 @@ contract GBAdsadsa {
         uint256 price;
         uint256 unit;
         string category;
-        string datePost;
+        uint256 datePost;
         uint256 discount;
         string soldAtLocation;
         string hashIpfsDetail;
         string[] imageProduct;
         mapping(uint256 => CommentProduct) commentProduct;
+        address seller;
     }
     struct CommentProduct {
         address addressComment;
@@ -40,7 +42,7 @@ contract GBAdsadsa {
         uint256 price,
         uint256 unit,
         string memory category,
-        string memory datePost,
+        uint256 datePost,
         uint256 discount,
         string memory soldAtLocation,
         string memory hashIpfsDetail
@@ -51,10 +53,11 @@ contract GBAdsadsa {
         MapProduct[id].price = price;
         MapProduct[id].unit = unit;
         MapProduct[id].category = category;
-        MapProduct[id].datePost = datePost;
+        MapProduct[id].datePost = now;
         MapProduct[id].discount = discount;
         MapProduct[id].soldAtLocation = soldAtLocation;
         MapProduct[id].hashIpfsDetail = hashIpfsDetail;
+        MapProduct[id].seller = msg.sender;
     }
 
     function setProductDiscount(uint256 idProduct, uint256 discount)
@@ -190,5 +193,77 @@ contract GBAdsadsa {
 
     function getAllUser() external view returns (address[] memory) {
         return ArrayUser;
+    }
+
+    // ------------------------------Oder-------------------------------
+    mapping(uint256 => Order) public MapOrder;
+    uint256[] ArrayOrder;
+    struct Order {
+        address buyer;
+        uint256 idProduct;
+        uint256 dateTime;
+        address seller;
+        uint256 numberProduct;
+        uint256 price;
+        uint256 totalValue;
+        string note;
+        string state;
+        bool ispay;
+    }
+
+    function setUserInfo(
+        uint256 idOrder,
+        address buyer,
+        uint256 idProduct,
+        uint256 numberProduct,
+        string memory note
+    ) public {
+        ArrayOrder.push(idOrder);
+        MapOrder[idOrder].buyer = msg.sender;
+        MapOrder[idOrder].dateTime = now;
+        MapOrder[idOrder].seller = MapProduct[idProduct].seller;
+        MapOrder[idOrder].numberProduct = numberProduct;
+        MapOrder[idOrder].price = MapProduct[idProduct].price;
+        MapOrder[idOrder].totalValue = MapOrder[idOrder].price * numberProduct;
+        MapOrder[idOrder].note = note;
+        MapOrder[idOrder].ispay = false;
+    }
+
+    // ---------------------------libari-------------------------
+
+    function subString(string memory a, string memory b)
+        private
+        view
+        returns (string memory)
+    {
+        return string(abi.encodePacked(a, b));
+    }
+
+    function genRandom(uint256 mod) public view returns (uint256) {
+        return uint256(keccak256(abi.encodePacked(now, msg.sender))) % mod;
+    }
+
+    function uintToStr(uint256 _i)
+        internal
+        pure
+        returns (string memory _uintAsString)
+    {
+        uint256 number = _i;
+        if (number == 0) {
+            return "0";
+        }
+        uint256 j = number;
+        uint256 len;
+        while (j != 0) {
+            len++;
+            j /= 10;
+        }
+        bytes memory bstr = new bytes(len);
+        uint256 k = len - 1;
+        while (number != 0) {
+            bstr[k--] = bytes1(uint8(48 + (number % 10)));
+            number /= 10;
+        }
+        return string(bstr);
     }
 }
