@@ -1,14 +1,20 @@
 import React, { Component } from "react"
 import { TestAtom } from "./atoms";
-import { TestMolecules } from "./molecules";
-import {TestPages } from "./pages";
+import { SellerTool, SellerUserInfo, HomeTabbar } from "./molecules";
+import { TestPages, Login } from "./pages";
 
 export default class extends Component {
     render() {
-        return (
-            <div>
-                <TestPages />
-            </div>
+        return ( <
+            div >
+            <
+            SellerUserInfo / >
+            <
+            SellerTool / >
+            <
+            HomeTabbar / >
+            <
+            /div>
         );
     }
 }

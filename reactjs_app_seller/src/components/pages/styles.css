@@ -1,0 +1,93 @@
+:root {
+    --borderSmall: 3px;
+    --borderMedium: 5px;
+    --borderLarge: 7px;
+    --charcoal-color: #264653;
+    --persianGreen-color: #2A9D8F;
+    --orangeYellowCrayola-color: #E9C46A;
+    --sandyBrown-color: #F4A261;
+    --burntSienna-color: #E76F51;
+    --darkSkyBlue-color: #04161d;
+    --almond-color: #FCE9D9;
+    --white: white;
+    --whitesmoke: whitesmoke;
+}
+
+
+/* --------------------------Login------------------- */
+
+.LoginMain {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.LoginMain>nav {
+    margin: 1rem 0;
+}
+
+.LoginMain>input {
+    border: 1px solid var(--sandyBrown-color);
+    height: 2rem;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+.LoginMain>button {
+    height: 2rem;
+    width: fit-content;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    color: var(--whitesmoke);
+    background-color: var(--sandyBrown-color);
+}
+
+
+/* ---------------------------EditSellerInfo--------------------- */
+
+.EditSellerInfonMain {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.EditSellerInfonMain>nav {
+    margin: 1rem 0;
+}
+
+.EditSellerInfonMain>input {
+    border: 1px solid var(--sandyBrown-color);
+    height: 2rem;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+.EditSellerInfonMain>button {
+    height: 2rem;
+    width: fit-content;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    color: var(--whitesmoke);
+    background-color: var(--sandyBrown-color);
+}
+
+
+/* -----------------------Account-------------------- */
+
+.AccountMain {
+    padding: 1rem;
+}
+
+.AccountMain>a {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.AccountMain>button {
+    background-color: var(--burntSienna-color);
+    padding: 0.5rem;
+}
