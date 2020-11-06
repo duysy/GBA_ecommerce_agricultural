@@ -1,21 +1,26 @@
 import React, { Component } from "react";
 import "./styles.css"
 import CategoriesContent from "./CategoriesContent"
+
 const dataTabView = [
     {
         title: "Description",
-        content: <CategoriesContent>Pahe1</CategoriesContent>
+        icon: "fa fa-user",
+        content: <CategoriesContent/>
     },
     {
         title: "Description",
+        icon: "fa fa-user",
         content: <CategoriesContent>Pahe2</CategoriesContent>
     },
     {
         title: "Description",
+        icon: "fa fa-user",
         content: <CategoriesContent>Pahe3</CategoriesContent>
     },
     {
         title: "Description",
+        icon: "fa fa-user",
         content: <CategoriesContent>Pahe4</CategoriesContent>
     }
 ]
@@ -33,7 +38,8 @@ export default class extends Component {
                     <ul>
                         {
                             dataTabView.map((item, index) => {
-                                return <li key={index}><input type="button" className={String(index === this.state.tabActive ? "CategoriesNav-active" : "")} value={item.title} onClick={() => {
+                                return <li key={index}>
+                                    <input type="button" className={String(index === this.state.tabActive ? "CategoriesNav-active" : "")} value={item.title} onClick={() => {
                                     this.setState({
                                         tabActive: index
                                     })
@@ -42,7 +48,7 @@ export default class extends Component {
                         }
                     </ul>
                 </div>
-                <div className="nav-tab-panel">
+                <div className="CategoriesContentWrap">
                     {
                         dataTabView.map((item, index) => {
                             return <div key={index} defaultChecked className={"CategorieContent" + String(index === this.state.tabActive ? " Categorie-active" : "")}>

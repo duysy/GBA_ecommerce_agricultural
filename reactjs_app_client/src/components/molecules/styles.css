@@ -205,6 +205,11 @@
     border-bottom: 1px solid var(--orangeYellowCrayola-color);
 }
 
+.CategoriesNav>ul>li>input {
+    height: 100%;
+    width: 100%;
+}
+
 .CategoriesNav-active {
     background-color: var(--orangeYellowCrayola-color);
 }
@@ -215,4 +220,29 @@
 
 .Categorie-active {
     display: block;
+}
+
+/* Categories Content */
+.CategoriesContentWrap {
+    width: 100%;
+}
+
+.CategoriesContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.CategoriesContentItem {
+    width: 25%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.CategoriesContentItem img {
+    width: 100%;
+}
+
+.CategoriesContentItem span {
+    font-size: 0.9rem;
 }
