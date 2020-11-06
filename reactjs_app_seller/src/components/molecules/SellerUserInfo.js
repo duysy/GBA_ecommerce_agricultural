@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {} from "../../contract/rawData"
 import "./styles.css"
 export default class extends Component {
     render() {
