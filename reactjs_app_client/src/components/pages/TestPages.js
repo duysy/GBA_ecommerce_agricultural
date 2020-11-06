@@ -1,11 +1,10 @@
 import React,{Component} from "react";
-import {He} from "../molecules"
-
+import "./styles.css";
 export default class extends Component{
     render(){
         return(
             <div>
-                THis is test page
+                THis is test page client
             </div>
         )
     }
