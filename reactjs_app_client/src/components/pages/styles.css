@@ -40,4 +40,5 @@
 
 .topSellContentScroll>.CardProductItem {
     width: 50vw;
+    margin-left: 0.5rem;
 }
