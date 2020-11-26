@@ -8,18 +8,18 @@ export default class extends Component {
             <nav className="HomeTabbar">
                 <Link to="/">
                     <i class="fa fa-home"></i>
-                    <nav>Home</nav>
+                    <nav>Trang chủ</nav>
                 </Link>
                 <Link to="/Categories"><i class="fa fa-align-justify"></i>
-                    <nav>Categories</nav>
+                    <nav>Danh mục</nav>
                 </Link>
                 <Link to="/Cart">
                     <i class="fa fa-shopping-cart"></i>
-                    <nav>Cart</nav>
+                    <nav>Giỏ</nav>
                 </Link>
                 <Link to="/Account">
                 <i class="fa fa-user-circle"></i>
-                    <nav>Account</nav>
+                    <nav>Tài khoản</nav>
                 </Link>
             </nav>
         );
