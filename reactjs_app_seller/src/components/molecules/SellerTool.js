@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import "./styles.css"
 export default class extends Component {
     render() {
@@ -7,12 +8,17 @@ export default class extends Component {
                 <h3>Công Cụ</h3>
                 <div className="SellerToolContainer">
                     <div className="SellerToolIteam">
-                        <i className="las la-file-alt"></i>
-                        <nav>Đơn Hàng</nav>
+                        <Link to="/">
+                            <i className="las la-file-alt"></i>
+                            <nav>Đơn Hàng</nav>
+                        </Link>
                     </div>
                     <div className="SellerToolIteam">
-                        <i className="las la-plus"></i>
-                        <nav>Thêm sản phẩm</nav>
+                        <Link to="/AddProduct">
+                            <i className="las la-plus"></i>
+                            <nav>Thêm sản phẩm</nav>
+                        </Link>
+
                     </div>
                     <div className="SellerToolIteam">
                         <i className="fa fa-user-circle"></i>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {} from "../../contract/rawData"
+import { Link } from "react-router-dom"
 import "./styles.css"
 export default class extends Component {
     render() {

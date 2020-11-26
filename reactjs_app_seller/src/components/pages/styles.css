@@ -13,6 +13,11 @@
     --whitesmoke: whitesmoke;
 }
 
+.Margin {
+    width: 100%;
+    height: 3rem;
+}
+
 
 /* --------------------------Login------------------- */
 
@@ -90,4 +95,30 @@
 .AccountMain>button {
     background-color: var(--burntSienna-color);
     padding: 0.5rem;
+}
+
+.AddProductMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AddProductMain nav {
+    background-color: var(--sandyBrown-color);
+    padding-left: 0.4rem;
+    margin: 0.1rem 0.2rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.AddProductMain input {
+    padding: 0.6rem 0.3rem;
+    box-sizing: border-box;
+}
+
+.AddProductMain button {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--sandyBrown-color);
 }
