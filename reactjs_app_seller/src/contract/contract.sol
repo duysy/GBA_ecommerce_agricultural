@@ -388,7 +388,7 @@ contract GBA {
         uint256 addressUser = uint256(address_);
         MapUser[addressUser].UserlistProduct.push(idProduct);
     }
-     function DBProduct_getListProduct(uint256 address_)
+     function DBUser_getListProduct(uint256 address_)
         external
         view
         returns (uint256[] memory)
