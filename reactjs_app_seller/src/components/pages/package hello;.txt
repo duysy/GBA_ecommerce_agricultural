@@ -1,0 +1,55 @@
+package hello;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import java.net.Socket;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+public class client {
+	static DataOutputStream outToServer;
+	static BufferedReader inFromServer;
+	static JFrame f;
+	static JTextField tf;
+	static JButton b;
+    public static void main(String argv[]) throws Exception
+    {
+    	f=new JFrame("Send something");
+    	tf=new JTextField();
+        b=new JButton("Send");  
+        b.setBounds(160,100,80,20);
+        b.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+					outToServer.writeBytes(tf.getText() + '\n');
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+            }
+        });
+        tf.setBounds(50,50, 300,20);  
+        f.add(b);
+        f.add(tf);
+        f.setSize(400,400);  
+        f.setLayout(null);  
+        f.setVisible(true);   
+
+        System.out.print("Input from client: ");
+
+        Socket clientSocket = new Socket("127.0.0.1", 6543);
+    
+        outToServer = new DataOutputStream(clientSocket.getOutputStream());
+
+        inFromServer =new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        while(!inFromServer.ready()){
+        	 JOptionPane.showMessageDialog(f, inFromServer.readLine());
+        }
+       
+//        clientSocket.close();    
+    }
+}

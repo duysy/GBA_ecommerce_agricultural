@@ -16,7 +16,7 @@ export default class extends Component {
                 </Link>
                 <Link to="/">
                     <i className="las la-inbox"></i>
-                    <nav>Cart</nav>
+                    <nav>Ví điện tử</nav>
                 </Link>
                 <Link to="/Account">
                     <i className="fa fa-user-circle"></i>

@@ -3,11 +3,16 @@ import Hompage from "./HomePage"
 import Account from "./Account"
 import Login from "./Login"
 import EditSellerInfo from "./EditSellerInfo"
-import AddProduct from "./AddProduct"
+import Product from "./Product"
+import Order from "./Order"
+import ListProduct from "./ListProduct"
 export {
     Hompage,
     Account,
     Login,
     EditSellerInfo,
-    AddProduct
+    Product,
+    Order,
+    TestPages,
+    ListProduct
 }

@@ -14,19 +14,23 @@ export default class extends Component {
                         </Link>
                     </div>
                     <div className="SellerToolIteam">
-                        <Link to="/AddProduct">
+                        <Link to="/Product/Add">
                             <i className="las la-plus"></i>
                             <nav>Thêm sản phẩm</nav>
                         </Link>
+                    </div>
+                    <div className="SellerToolIteam">
+                        <Link to="/Order">
+                            <i className="fa fa-user-circle"></i>
+                            <nav>Đơn Hàng</nav>
+                        </Link>
+                    </div>
+                    <div className="SellerToolIteam">
 
-                    </div>
-                    <div className="SellerToolIteam">
-                        <i className="fa fa-user-circle"></i>
-                        <nav>Đơn Hàng</nav>
-                    </div>
-                    <div className="SellerToolIteam">
-                        <i className="fa fa-user-circle"></i>
-                        <nav>Đơn Hàng</nav>
+                        <Link to="/ListProduct">
+                            <i className="fa fa-user-circle"></i>
+                            <nav>Danh sách</nav>
+                        </Link>
                     </div>
                 </div>
             </div>

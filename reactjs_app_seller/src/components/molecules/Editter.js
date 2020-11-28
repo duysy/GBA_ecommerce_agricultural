@@ -6,9 +6,6 @@ export default class extends Component {
         this.state = {
             content: ""
         }
-        this.config = {
-            readonly: false
-        }
 
     }
     render() {
@@ -16,7 +13,7 @@ export default class extends Component {
             <JoditEditor
                 ref={React.createRef()}
                 value={this.state.content}
-                config={this.config}
+                config={{readonly: false}}
                 tabIndex={1}
                 onChange={(newContent) => {
                     console.log(newContent);

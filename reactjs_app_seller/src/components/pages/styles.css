@@ -122,3 +122,56 @@
     font-size: 1.1rem;
     background-color: var(--sandyBrown-color);
 }
+
+
+/* --------------CardProductItem */
+
+.CardProductItem {
+    width: 100%;
+    padding: 0.1rem;
+    box-sizing: border-box;
+    border: 0.1px solid var(--darkSkyBlue-color);
+    margin: 0.5rem 0;
+}
+
+.CardProductImage>img {
+    width: 100%;
+}
+
+.CardProductPrice {
+    color: var(--orangeYellowCrayola-color);
+}
+
+.CardProductLocation {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+
+/* ----------Category */
+
+.categoryParent {
+    width: 25vw;
+    overflow: scroll;
+    padding-bottom: 100px;
+    background: var(--category-color);
+}
+
+.categoryParentItem {
+    text-align: center;
+    overflow: hidden;
+    padding: 8px 8px;
+}
+
+.categoryItem--active {
+    background: var(--white);
+}
+
+.categoryParent-icon {
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+
+.categoryParent-name {
+    font-size: 10px;
+}

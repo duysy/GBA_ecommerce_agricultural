@@ -1,8 +1,49 @@
 import web3 from './web3';
 
-const addressContract = '0xFBCDdCde8F78Bc1928c0a8f09976474675679732';
+const addressContract = '0x3FD3459cE0a929ca0925Ef50FD25dec1921499E1';
 const abi = [{
-        "constant": false,
+        "inputs": [{
+                "internalType": "uint256",
+                "name": "idOrder",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "buyer",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "seller",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "idProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "numberProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "note",
+                "type": "string"
+            }
+        ],
+        "name": "DBOder_insert",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -14,27 +55,59 @@ const abi = [{
                 "type": "string"
             }
         ],
-        "name": "addImageProduct",
+        "name": "DBProduct_addImageProduct",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [{
-            "internalType": "uint256",
-            "name": "index",
-            "type": "uint256"
-        }],
-        "name": "delIteamProduct",
+                "internalType": "string",
+                "name": "title",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "unit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "category",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "discount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "soldAtLocation",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "hashIpfsDetail",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "hashIpfsImage",
+                "type": "string"
+            }
+        ],
+        "name": "DBProduct_insert",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -61,17 +134,32 @@ const abi = [{
                 "type": "string"
             }
         ],
-        "name": "setCommentProduct",
+        "name": "DBProduct_setCommentProduct",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [{
                 "internalType": "uint256",
-                "name": "id",
+                "name": "idProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "discount",
+                "type": "uint256"
+            }
+        ],
+        "name": "DBProduct_setProductDiscount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+                "internalType": "uint256",
+                "name": "idProduct",
                 "type": "uint256"
             },
             {
@@ -95,11 +183,6 @@ const abi = [{
                 "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "datePost",
-                "type": "string"
-            },
-            {
                 "internalType": "uint256",
                 "name": "discount",
                 "type": "uint256"
@@ -115,33 +198,36 @@ const abi = [{
                 "type": "string"
             }
         ],
-        "name": "setProduct",
+        "name": "DBProduct_update",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
+        "inputs": [],
+        "name": "DBUser_active",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [{
-                "internalType": "uint256",
-                "name": "idProduct",
-                "type": "uint256"
+                "internalType": "address",
+                "name": "address_",
+                "type": "address"
             },
             {
                 "internalType": "uint256",
-                "name": "discount",
+                "name": "idProduct",
                 "type": "uint256"
             }
         ],
-        "name": "setProductDiscount",
+        "name": "DBUser_insertListProduct",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [{
                 "internalType": "string",
                 "name": "nameUser",
@@ -154,26 +240,24 @@ const abi = [{
             },
             {
                 "internalType": "string",
-                "name": "hashIpfsDetail",
+                "name": "phoneNumber",
                 "type": "string"
             },
             {
                 "internalType": "string",
-                "name": "phoneNumber",
+                "name": "hashIpfsDetail",
                 "type": "string"
             }
         ],
-        "name": "setUserInfo",
+        "name": "DBUser_update",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [{
                 "internalType": "address",
-                "name": "addressUser",
+                "name": "address_",
                 "type": "address"
             },
             {
@@ -182,33 +266,17 @@ const abi = [{
                 "type": "bool"
             }
         ],
-        "name": "setUserIsSeller",
+        "name": "DBUser_updateUserIsSeller",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "constructor"
     },
     {
-        "constant": true,
-        "inputs": [],
-        "name": "getAllIdProduct",
-        "outputs": [{
-            "internalType": "uint256[]",
-            "name": "",
-            "type": "uint256[]"
-        }],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
         "inputs": [{
                 "internalType": "uint256",
                 "name": "idProduct",
@@ -220,7 +288,7 @@ const abi = [{
                 "type": "uint256"
             }
         ],
-        "name": "getCommentProduct",
+        "name": "DBProduct_getCommentProduct",
         "outputs": [{
                 "internalType": "address",
                 "name": "",
@@ -242,41 +310,47 @@ const abi = [{
                 "type": "string"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
         "inputs": [{
             "internalType": "uint256",
             "name": "idProduct",
             "type": "uint256"
         }],
-        "name": "getImageProduct",
+        "name": "DBProduct_getImageProduct",
         "outputs": [{
             "internalType": "string[]",
             "name": "",
             "type": "string[]"
         }],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "address_",
+            "type": "uint256"
+        }],
+        "name": "DBUser_getListProduct",
+        "outputs": [{
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+        }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [{
             "internalType": "address",
-            "name": "addressUser",
+            "name": "address_",
             "type": "address"
         }],
-        "name": "getUserInfo",
+        "name": "DBUser_sellect",
         "outputs": [{
-                "internalType": "uint256[]",
-                "name": "",
-                "type": "uint256[]"
-            },
-            {
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
@@ -307,12 +381,101 @@ const abi = [{
                 "type": "bool"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
+        "inputs": [{
+            "internalType": "address",
+            "name": "address_",
+            "type": "address"
+        }],
+        "name": "getAddressUint256",
+        "outputs": [{
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "start",
+            "type": "uint256"
+        }],
+        "name": "getIdNodeto5",
+        "outputs": [{
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+        }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }],
+        "name": "MapOrder",
+        "outputs": [{
+                "internalType": "address",
+                "name": "buyer",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "idProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dateTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "seller",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "numberProduct",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "totalValue",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "note",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "state",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "ispay",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [{
             "internalType": "uint256",
             "name": "",
@@ -340,9 +503,9 @@ const abi = [{
                 "type": "string"
             },
             {
-                "internalType": "string",
+                "internalType": "uint256",
                 "name": "datePost",
-                "type": "string"
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
@@ -358,14 +521,58 @@ const abi = [{
                 "internalType": "string",
                 "name": "hashIpfsDetail",
                 "type": "string"
+            },
+            {
+                "internalType": "address",
+                "name": "seller",
+                "type": "address"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
+        "inputs": [{
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }],
+        "name": "MapUser",
+        "outputs": [{
+                "internalType": "uint256",
+                "name": "AvengeStart",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "nameUser",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "addressUser",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "hashIpfsDetail",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "phoneNumber",
+                "type": "string"
+            },
+            {
+                "internalType": "bool",
+                "name": "isSeller",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "owner",
         "outputs": [{
@@ -373,7 +580,17 @@ const abi = [{
             "name": "",
             "type": "address"
         }],
-        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "random",
+        "outputs": [{
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }],
         "stateMutability": "view",
         "type": "function"
     }

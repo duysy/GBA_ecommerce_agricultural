@@ -66,12 +66,16 @@
     grid-template-columns: 33% 33% 33%;
 }
 
-.SellerToolIteam {
+.SellerToolIteam>a {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 1rem 0;
+}
+
+.SellerToolIteam nav {
+    text-align: center;
 }
 
 .SellerToolIteam i {
@@ -113,4 +117,176 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+/* ------------Cart */
+
+.CartDestination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px gray;
+    padding-top: 8px;
+}
+
+.CartDestinationIcon {
+    margin-left: 8px;
+}
+
+.CartDestinationIcon i {
+    font-size: 32px;
+}
+
+.CartDestinationLocation {
+    margin: 0 12px;
+}
+
+.CartDestinationChangeLocation {
+    margin-right: 8px;
+    color: var(--darkSkyBlue-color);
+}
+
+.CartProducts {
+    margin-left: 8px;
+    margin-top: 20px;
+}
+
+.CartDistributor span {
+    margin-left: 12px;
+}
+
+.CartProductItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 8px 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.CartProductItem:last-child {
+    border-bottom: unset;
+}
+
+.CartProductImg img {
+    width: 86.4px;
+    height: 86.4px;
+    margin: 0 8px;
+}
+
+.CartProductDetails {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.CartProductDescription {
+    color: gray;
+    margin: 4px 0;
+}
+
+.CartDistributor {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.CartProductPriceAmount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CartProductPrice {
+    color: var(--orangeYellowCrayola-color);
+    font-weight: 600;
+}
+
+.CartProductAmount {
+    display: flex;
+    margin-right: 4px;
+    align-items: center;
+}
+
+.CartProductCurrentAmount {
+    padding: 0px 12px;
+    background: rgb(248, 248, 248);
+}
+
+.CartProductChangeAmount {
+    padding: 0 8px;
+    font-size: 16px;
+}
+
+.CartVoucher {
+    margin-bottom: 120px;
+}
+
+.CartVoucherForm {
+    padding: 12px;
+    margin-top: 12px;
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+
+.CartVoucherForm input {
+    border: 1px solid #ddd;
+    border-radius: var(--borderSmall);
+    padding: 0 8px;
+    margin-right: 12px;
+    height: 30px;
+    flex: 1;
+}
+
+.CartVoucherForm button {
+    background: var(--burntSienna-color);
+    font-weight: bold;
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: var(--borderSmall);
+}
+
+.CartPayment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 46px;
+    left: 0;
+    right: 0;
+    padding: 8px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: var(--white);
+}
+
+.CartSelectAll {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.CartSelectAll label {
+    margin-left: 8px;
+}
+
+.CartFeeWrap {
+    display: flex;
+    align-items: center;
+}
+
+.CartFeeShip {
+    font-size: 12px;
+}
+
+.CartFreeTotal {
+    font-size: 16px;
+}
+
+.CartPaymentBtn button {
+    color: var(--white);
+    font-weight: bold;
+    padding: 8px 12px;
+    background: var(--burntSienna-color);
+    border-radius: var(--borderSmall);
+    margin: 0 8px;
 }
