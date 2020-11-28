@@ -41,3 +41,22 @@
 .topSellContentScroll>.CardProductItem {
     width: 50vw;
 }
+
+/* Comment */
+
+.ProductDetailsComment {
+    margin-bottom: 100px;
+}
+
+.ProductDetailsCommentGeneral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    font-size: 14px;
+    color: #999;
+}
+
+.ProductDetailsCommentViewAll {
+    color: var(--burntSienna-color);
+}

@@ -7,7 +7,7 @@ export default class extends Component {
         return (
             <nav className="CardHeader">
                 <h1>{this.props.children}</h1>
-                <Link to="#">See more</Link>
+                <Link to="#">Xem thêm</Link>
             </nav>
         );
     }

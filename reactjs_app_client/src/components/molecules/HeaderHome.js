@@ -6,7 +6,7 @@ export default class extends Component {
         return (
             <div className="headerHome">
                 <div className="headerHome-search-input">
-                    <input type="text" placeholder="Search in XXXX"/>
+                    <input type="text" placeholder="Tìm kiếm trên Ecogri"/>
                 </div>
                 <div className="headerHome-search-button">
                     <button type="button">
