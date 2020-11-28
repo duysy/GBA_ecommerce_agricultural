@@ -1,4 +1,4 @@
-import react, { Component } from "react";
+import React,{Component} from "react"
 import { HeaderHome, BannerSliderWrap, HomeTabbar, CardHeader, CardProductItem, Cart, Account, LoginForm, RegisterForm } from "../molecules";
 import "./styles.css"
 
@@ -7,10 +7,10 @@ export default class extends Component {
         return (
             <div className="Account">
                 <HeaderHome />
-                <Account/>
+                <Account />
                 <div className="AccountBody">
-                    <LoginForm/>
-                    <RegisterForm/>
+                    <LoginForm />
+                    <RegisterForm />
                 </div>
                 <HomeTabbar />
             </div>
